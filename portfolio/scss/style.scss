@@ -244,7 +244,7 @@ Main Components
     }
 }
 
-.cd-title {
+.title {
 	position: absolute;
 	z-index: 1;
 	left: 0;
@@ -309,7 +309,7 @@ Main Components
 	}
 }
 
-.cd-project-info {
+.project-info {
 	clear: both;
 	visibility: hidden;
 	opacity: 0;
@@ -338,8 +338,8 @@ Main Components
 	}
 }
 
-.projects-container .cd-close,
-.projects-container .cd-scroll {
+.projects-container .close,
+.projects-container .scroll {
 	display: block;
 	z-index: 1;
 	width: 44px;
@@ -354,7 +354,7 @@ Main Components
 	@include transition(transform 1s 0s, visibility 0s 1s);
 }
 
-.projects-container .cd-close {
+.projects-container .close {
 	position: fixed;
 	top: 30px;
 	right: 5%;
@@ -366,7 +366,7 @@ Main Components
 	}
 }
 
-.projects-container .cd-scroll {
+.projects-container .scroll {
 	position: absolute;
 	bottom: 30px;
 	left: 50%;
@@ -378,28 +378,28 @@ Main Components
 	}
 }
 
-.project-is-open .cd-close,
-.project-is-open .cd-scroll {
+.project-is-open .close,
+.project-is-open .scroll {
 	visibility: visible;
 	@include transform(scale(1));
 	@include transition(transform 0.4s 0s, visibility 0s 0s);
 }
 
-.project-is-open .cd-scroll {
+.project-is-open .scroll {
 	@include transform(translateX(-50%) scale(1));
-	@include animation(cd-translate 1.2s 0.4s);
+	@include animation(translate 1.2s 0.4s);
 	@include animation-iteration-count(2);
 }
 
-.no-touch .project-is-open .cd-close:hover {
+.no-touch .project-is-open .close:hover {
 	@include transform(scale(1.2));
 }
 
-.no-touch .project-is-open .cd-scroll:hover {
+.no-touch .project-is-open .scroll:hover {
 	@include transform(translateX(-50%) scale(1.2));
 }
 
-@include keyframes(cd-translate) {
+@include keyframes(translate) {
 	0% {
 		@include transform(translateX(-50%) scale(1));
 	}
