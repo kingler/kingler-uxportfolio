@@ -16,8 +16,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "PT Sans", sans-serif;
-  color: #ffffff;
-  background-color: #101524;
+  color: #101524;
+  background-color: #fff;
 }
 
 a {
@@ -326,6 +326,119 @@ Main Components
   margin: 0 auto;
   line-height: 2;
 }
+.cd-project-info .skills {
+   width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 2;
+}
+.cd-project-info .skills div{
+  line-height: 2;
+}
+
+.skill {
+	padding-top:10px;
+	}
+
+.skills div {
+	margin-bottom:20px;
+	background:#E4E7EB;
+	height:20px;
+	}
+
+.skills div em {
+	color: #FFFFFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding-left: 8px;
+    position: relative;
+    text-transform: uppercase;
+    top: 0px;
+	}
+
+.ie8 .skills div em {
+	top:2px;
+	}
+
+.expand {
+	height:20px;;
+	position:absolute;
+	}
+
+.ie7 .expand {
+	margin-top:-5px;
+	}
+
+
+.uxresearch {
+	width:65%;
+	-moz-animation:uxresearch 2s ease-out;
+	-webkit-animation:uxresearch 2s ease-out;
+	background:#1B9E0E ;
+	}
+
+.sketching {
+	width:90%;
+	-moz-animation:sketching 2s ease-out;
+	-webkit-animation:sketching 2s ease-out;
+	background:#3a7aa6;
+	}
+
+.wireframeing {
+	width:90%;
+	-moz-animation:wireframeing 2s ease-out;
+	-webkit-animation:wireframeing 2s ease-out;
+	background:#627076;
+	}
+
+.prototyping {
+	width:90%;
+	-moz-animation:prototyping 2s ease-out;
+	-webkit-animation:prototyping 2s ease-out;
+	background:#D44924;
+	}
+
+.highfedilitymockups {
+	width:99%;
+	-moz-animation:highfedilitymockups 2s ease-out;
+	-webkit-animation:highfedilitymockups 2s ease-out;
+	background:#16A2DE;
+	}
+
+.styleguides {
+	width:99%;
+	-moz-animation:styleguides 2s ease-out;
+	-webkit-animation:styleguides 2s ease-out;
+	background:#3a7aa6;
+	}
+
+
+
+@-moz-keyframes uxresearch { 0% { width:0px;} 100%{ width:70%;}  }
+@-moz-keyframes sketching { 0% { width:0px;} 100%{ width:90%;}  }
+@-moz-keyframes wireframeing { 0% { width:0px;} 100%{ width:50%;}  }
+@-moz-keyframes prototyping { 0% { width:0px;} 100%{ width:40%;}  }
+@-moz-keyframes highfedilitymockups { 0% { width:0px;} 100%{ width:75%;} }
+@-moz-keyframes styleguides { 0% { width:0px;} 100%{ width:65%;} }
+@-moz-keyframes usabilitytesting { 0% { width:0px;} 100%{ width:90%;} }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width: 1024px) {
   .cd-project-info {
     position: relative;
