@@ -76,36 +76,6 @@ jQuery(document).ready(function ($) {
 
 
 
-
-
-// SMOOTH SHOW FUNCION FOR ELEMENTS THAT TAKE ACTION WHEN VISIBLE (skills)
-function smoothShow() {
-
-	/*----------------------------------------------
-		 	S K I L L   A N I M A T I O N
-	------------------------------------------------*/
-	jQuery('.skill').each(function () {
-		var visible = jQuery(this).visible(true);
-		var percent = jQuery(this).find('.skill-bar .skill-active ').attr('data-perc');
-		if (jQuery(this).hasClass("anim")) {} else if (visible) {
-			var randomval = Math.floor(Math.random() * (300 - 50 + 1)) + 50;
-			jQuery(this).addClass("anim");
-			jQuery(this).find('.skill-bar .skill-active ').animate({
-				'width': percent + '%',
-			}, 2000, 'easeInOutQuart', function () {
-				jQuery(this).find('.tooltip').delay(randomval).animate({
-					'top': '-28px',
-					'opacity': 1
-				}, 500);
-			}).css('overflow', 'visible');
-		}
-	});
-
-
-}
-
-
-
 /*
  * BG Loaded
  * Copyright (c) 2014 Jonathan Catmull
