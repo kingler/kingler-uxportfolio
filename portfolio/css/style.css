@@ -360,44 +360,48 @@ Main Components
 }
 
 .project-info p,
-.project-info h2 {
-	width: 90%;
+.project-info h1,
+.project-info h2,
+.skill,
+.skill h4 {
 	max-width: 800px;
 	margin: 0 auto;
-	line-height: 2;
 	font-family: 'Raleway', sans-serif;
 }
+/*
+.project-info h1 {
+	font-size: 2.9rem;
+	font-weight: 700;
+}
+*/
 
 .project-info h2 {
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 1.9em;
+	line-height: 2;
 }
 
 .project-info p {
 	font-weight: 200;
 	font-size: 1.0em;
-}
-/*.skill {
-	margin: 20px auto;
-	width: 80%;
-}*/
-
-.skill,
-.skill h4 {
-	margin: 10px auto;
-	width: 80%;
+	line-height: 2;
 }
 
 div .skill:first-child {
 	margin-top: 0px;
 }
 
-skill .skill-name strong,
-.skill .skill-bar {
-	margin-left: -20px;
+.skill .skill-name strong {
+	margin-bottom: 5px;
+	margin-left: 0px;
+	display: block;
+	font-weight: 200;
+	font-size: .90em;
+	color: #666;
 }
 
 .skill .skill-name {
+	margin-left: 0px;
 	margin-bottom: 5px;
 	display: block;
 }
@@ -406,7 +410,7 @@ skill .skill-name strong,
 	background: #d9d9d9;
 	height: 8px;
 	width: 50%;
-	position: relative;
+	margin-bottom: 10px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-khtml-border-radius: 2px;
@@ -449,16 +453,14 @@ skill .skill-name strong,
 .tooltip {
 	position: absolute;
 	width: 40px;
-	height: 7px;
-	line-height: 10px;
-	line-height: 5px;
-	padding: 10px;
+	height: 20px;
+	padding: 2px;
 	font-size: 11px;
 	text-align: center;
 	color: #ffffff;
 	background: #262626;
 	border-radius: 2px;
-	top: -20px;
+	top: -25px;
 	/* will be set to -30px through js */
 
 	right: -5px;
