@@ -26,9 +26,9 @@ jQuery(document).ready(function ($) {
 	});
 
 	//update title and .scroll opacity while scrolling
-	$(window).on('scroll', function () {
-		window.requestAnimationFrame(changeOpacity);
-	});
+	/*	$(window).on('scroll', function () {
+			window.requestAnimationFrame(changeOpacity);
+		});*/
 
 	function toggleProject(project, container, bool) {
 		if (bool) {
