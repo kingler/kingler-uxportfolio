@@ -1,0 +1,572 @@
+<!DOCTYPE HTML>
+<html>
+
+<!--[if IE 7 ]>    <html class= "ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class= "ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class= "ie9"> <![endif]-->
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Kingler's Resume</title>
+
+	<!-- *************************************************************************
+**************************   STYLE SHEET   *******************************
+************************************************************************** -->
+
+	<link href="css/resume.css" rel="stylesheet" type="text/css" />
+	<link href="../css/gumby.css" rel="stylesheet" type="text/css" />
+
+	<!-- *************************************************************************
+**************************        JS       *******************************
+************************************************************************** -->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.quicksand.js">
+	</script>
+	<script type="text/javascript" src="js/custom.js">
+	</script>
+	<script type="text/javascript" src="js/hoverIntent.js">
+	</script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js">
+	</script>
+	<script type="text/javascript" src="js/twitter.js">
+	</script>
+
+	<!-- *************************************************************************
+*********************  THIS IS THE CONTACT FORM JS  **************************
+************************************************************************** -->
+
+	<script type='text/javascript'>
+		$(document).ready(function () {
+			var active_color = '#929191'; // Colour of user provided text
+			var inactive_color = '#929191'; // Colour of default text
+			$("input.default-value").css("color", inactive_color);
+			var default_values = new Array();
+			$("input.default-value").focus(function () {
+				if (!default_values[this.id]) {
+					default_values[this.id] = this.value;
+				}
+				if (this.value == default_values[this.id]) {
+					this.value = '';
+					this.style.color = active_color;
+				}
+				$(this).blur(function () {
+					if (this.value == '') {
+						this.style.color = inactive_color;
+						this.value = default_values[this.id];
+					}
+				});
+			});
+
+			$('#contactform').submit(function () {
+
+				formvalues = $("#contactform").serialize();
+
+				$.ajax({
+					type: "POST",
+					url: "mailer.php",
+					data: formvalues,
+					dataType: "json",
+					success: function (data) {
+						if (data.success == 1) {
+							$("#contactwrapper").slideUp(750, function () {
+								$('#contactmessage').html('Thanks! Please check your email to confirm your subscription.');
+							});
+						} else {
+							if (data.invalid_email == 1) {
+								$('#email').addClass("form_error");
+							} else {
+								$('#email').removeClass("form_error");
+							}
+
+						}
+					}
+				});
+				return false;
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<div id="header_wrapper">
+		<div class="row">
+			<div class="six columns" id="statment">
+				<h1>Resume/CV</h1>
+				<h4>User Experience Designer</h4>
+				<p>Hi there my name is Kingler Bercy. I am a user experience designer with extensive background in designing intuitive user friendly applications for the web, desktop screens, and mobile devices. My design approach is based on four core universal principles of design: <a href="">Minimalism</a>(less is more), <a href="">Information aesthetics</a> (simplying complexity thru imagery), <a>Heuristic evaluation</a> (meaningful data), <a href="">User Centered Design</a> (descovering the needs, nants, and desires of the user). I've worked with both small business and multinational fortune five hundred companies on designing user interfaces for complex financial management systems. </p>
+			</div>
+			<div class="six columns">
+				<div class="row"><a href="" target="_blank">Download my resume</a>
+				</div>
+				<div class="contact_me_phone">
+					347.414.4170
+				</div>
+				<div class="contact_me_site">
+					<a href="#">www.kingler.me</a>
+				</div>
+				<div class="contact_me_location">
+					Forest Hills, NY
+				</div>
+				<div class="contact_me_email">
+					<a href="mailto:kingler@me.com">kingler@me.com</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="row">
+		<div class="column">
+			<h6><span class="styled_heading">Skills</span></h6>
+			<span class="tech-range">Technical Proficiency </span>
+			<iframe src="skills/index.html" width="100%" height="500"></iframe>
+			<!--	<div class="skillbar clearfix " data-percent="80%">
+				<div class="skillbar-title" style=""><span>HTML5</span>
+				</div>
+				<div class="skillbar-bar" style="background: #e67e22;"></div>
+				<div class="skill-bar-percent">80%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="85%">
+				<div class="skillbar-title" style=""><span>UX Research</span>
+				</div>
+				<div class="skillbar-bar" style="background: #3498db;"></div>
+				<div class="skill-bar-percent">85%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="80%">
+				<div class="skillbar-title" style=""><span>Concept Sketching</span>
+				</div>
+				<div class="skillbar-bar" style="background: #2c3e50;"></div>
+				<div class="skill-bar-percent">80%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="85%">
+				<div class="skillbar-title" style=""><span>Wireframing</span>
+				</div>
+				<div class="skillbar-bar" style="background: #5a68a5;"></div>
+				<div class="skill-bar-percent">85%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="75%">
+				<div class="skillbar-title" style=""><span>Prototyping</span>
+				</div>
+				<div class="skillbar-bar" style="background: #525252;"></div>
+				<div class="skill-bar-percent">75%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="96%">
+				<div class="skillbar-title" style=""><span>High Fedility Mockups</span>
+				</div>
+				<div class="skillbar-bar" style="background: #2ecc71;"></div>
+				<div class="skill-bar-percent">96%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="75%">
+				<div class="skillbar-title" style=""><span>Style Guides</span>
+				</div>
+				<div class="skillbar-bar" style="background: #4288d0;"></div>
+				<div class="skill-bar-percent">75%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="70%">
+				<div class="skillbar-title" style=""><span>Usability Testing</span>
+				</div>
+				<div class="skillbar-bar" style="background: #4288d0;"></div>
+				<div class="skill-bar-percent">75%</div>
+			</div>-->
+
+		</div>
+
+		<div class="column">
+			<h6><span class="styled_heading">Tools</span></h6>
+			<span class="tech-range">Technical Proficiency </span>
+			<iframe src="skills/index.html" width="100%" height="500"></iframe>
+			<!--<div class="skillbar clearfix " data-percent="75%">
+				<div class="skillbar-title" style=""><span>Photoshop</span>
+				</div>
+				<div class="skillbar-bar" style="background: #e67e22;"></div>
+				<div class="skill-bar-percent">75%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="84%">
+				<div class="skillbar-title" style=""><span>Illustrator</span>
+				</div>
+				<div class="skillbar-bar" style="background: #3498db;"></div>
+				<div class="skill-bar-percent">84%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="50%">
+				<div class="skillbar-title" style=""><span>Indesign</span>
+				</div>
+				<div class="skillbar-bar" style="background: #2c3e50;"></div>
+				<div class="skill-bar-percent">50%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="73%">
+				<div class="skillbar-title" style=""><span>MindNode Pro</span>
+				</div>
+				<div class="skillbar-bar" style="background: #5a68a5;"></div>
+				<div class="skill-bar-percent">73%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="80%">
+				<div class="skillbar-title" style=""><span>Axure</span>
+				</div>
+				<div class="skillbar-bar" style="background: #525252;"></div>
+				<div class="skill-bar-percent">80%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="80%">
+				<div class="skillbar-title" style=""><span>Html</span>
+				</div>
+				<div class="skillbar-bar" style="background: #2ecc71;"></div>
+				<div class="skill-bar-percent">80%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="90%">
+				<div class="skillbar-title" style=""><span>CSS</span>
+				</div>
+				<div class="skillbar-bar" style="background: #4288d0;"></div>
+				<div class="skill-bar-percent">90%</div>
+			</div>
+
+			<div class="skillbar clearfix " data-percent="80%">
+				<div class="skillbar-title" style=""><span>Javascript</span>
+				</div>
+				<div class="skillbar-bar" style="background: #4288d0;"></div>
+				<div class="skill-bar-percent">80%</div>
+			</div>-->
+		</div>
+	</div>
+	<div class="clear"></div>
+	<h6><span class="styled_heading">Work Experience</span></h6>
+	<div class="row">
+		<div class="column">
+			<ul>
+				<li>
+					<div class="row">
+						<span class="small_heading column">Imagineer technology group (ITG)</span>
+						<div class="lgt_block column">
+							APR-07 2014 - PRESENT
+						</div>
+					</div>
+
+					<div class="drk_block">
+						user experience designer
+					</div>
+
+					<div class="content2">
+						<p>ITG is a software company that creates highly customizable web-based invetment managment tools for the due diligence process associated with investing in hedge funds accoss all asset classes</p>
+
+						<ul class="square">
+							<li><a href="#">Designed and prototyped a fund management dashboard for one of ITG’s flagship software applications called FundInsight. FundInsight is a web-based platform for managing the due diligence process associated with investing in hedge funds.  </a>
+							</li>
+							<li>Conducted user and stakeholder interviews and workshops to understand behaviors patterns, pain points, and desired features prior to designing the user interface.
+							</li>
+							<li>Organized features into meaningful categories for better workflow use case modeling </li>
+							<li>Conducted heuristic evaluations of Fundinsight to identify possible enhancements or redesign opportunities
+							</li>
+							<li>Created and presented wireframe mockups and customer journey maps to stakeholders for feedback and approval
+							</li>
+							<li>Created a style guide with a full range of html elements for quickly prototyping future application module
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<ul>
+				<hr>
+				<li>
+					<div class="row">
+						<span class="small_heading column">NYSE EURONEXT</span>
+						<div class="lgt_block column">
+							OCT-11 2014 - APR-04 2013
+						</div>
+					</div>
+					<div class="drk_block">
+						user experience designer
+					</div>
+
+					<div class="content2">
+						<p>Design the user experience for process orders and managing product offers for NYSE’s administrators and account executives. Both admin and account executives should have the ability to collaborate with the client and delegate order configuration tasks during the ordering process
+						</p>
+						<ul class="square">
+							<li><a href="#">Designed and prototyped a fund management dashboard for one of ITG’s flagship software applications called FundInsight. FundInsight is a web-based platform for managing the due diligence process associated with investing in hedge funds.  </a>
+							</li>
+							<li>Designed comprehensive information architectural documentation for the following application/modules of the e-commerce portal: a user permission-ing system for both internal and external users, offer management and pricing rules system, discussion and collaboration tool, and a messaging framework
+							</li>
+							<li>Collaborated with other product managers on UX standards across all applications modules
+							</li>
+							<li>Conducted weekly technical requirement meetings with the development team every sprint cycle
+							</li>
+							<li>Conducted user acceptance testing with end users and stakeholders for final product acceptance
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="column">
+			<ul>
+				<li>
+					<div class="row">
+						<span class="small_heading column">Standard and Poor's </span>
+						<div class="lgt_block column">
+							JUN 2013 - APR 2014
+						</div>
+					</div>
+					<div class="drk_block">
+						User Experience architect
+					</div>
+					<div class="content2">
+						<p>Standard & Poor's Financial Services LLC (S&P) is an financial services company. It is a division of McGraw Hill Financial that publishes financial research and analysis on stocks and bonds. I was involved in designing a web-based ratings application to assess the creditworthness of S&P's banking and corporte clients by ratings analyst.</p>
+						<ul class="square">
+							<li>Worked continuously with business analysts, developers, and the QA staff to ensure the development of intuitive applications </li>
+							<li>Created high level process flow diagrams that were presented and socialized with the user groups and product managers </li>
+							<li>Worked with the business analysts on writing user stories and use cases scenarios </li>
+							<li>CWorked on migrating 20 legacy internal applications to Liferay portal, which is an enterprise level CMS platform </li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<ul>
+				<hr>
+				<li>
+					<div class="row">
+						<span class="small_heading column">MORGAN STANLEY SMITH BARNEY </span>
+						<div class="lgt_block column">
+							MAY-16 2010 - OCT-30 2011
+						</div>
+					</div>
+					<div class="drk_block">
+						User Experience designer
+					</div>
+					<div class="content2">
+						<p>Standard & Poor's Financial Services LLC (S&P) is an financial services company. It is a division of McGraw Hill Financial that publishes financial research and analysis on stocks and bonds. I was involved in designing a web-based ratings application to assess the creditworthness of S&P's banking and corporte clients by ratings analyst.</p>
+						<ul class="square">
+							<li>Collaborated with stakeholders and user groups, regularly, on design iterations </li>
+							<li>Researched and analyzed human task workflow procedures and real time processes of call center agents to determine design focus and content hierarchy
+							</li>
+							<li>Create standardized CSS style sheets to control application layout consistency for both the Adobe LiveCycle Mosaic platform level and the individual Flex apps
+							</li>
+
+							<li>Created and successfully delivered information architect documentation; presenting tangible expression of strategy in the form of sketches, user flows diagrams, wireframes, and click-through PDF prototypes in high fidelity to simulate actual navigation
+							</li>
+
+							<li>Created detailed use case documentation to help facilitate learning and understanding of application functionality, intent and flow for both developers and the CSR perspective
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+
+	<div class="full_width timeline-bg">
+		<h6><span class="styled_heading">Project Timeline</span></h6>
+		<div class="timeline">
+			<!-- width=the length that will display - left=100 less width set ie 100-42=58 etc etc -->
+			<ul class="events">
+				<li class="gold" style="width: 30%; left: 70%;">Imagineer technology group </li>
+				<li class="red" style="width: 21%; left: 49%;">Standard and Poor's</li>
+				<li class="green" style="width: 15%; left: 34%;">NYSE </li>
+				<li class="blue" style="width: 25%; left: 9%;">MORGAN STANLEY</li>
+				<li class="gray" style="width: 9%; left: 0%;">INFONIC AG </li>
+			</ul>
+			<!-- end .events -->
+
+			<ul class="intervals">
+				<li class="first">2011</li>
+				<li class="second">2012</li>
+				<li class="third">2013</li>
+				<li class="fourth">2014</li>
+				<li class="last">2015</li>
+			</ul>
+			<!-- end .intervals -->
+
+		</div>
+		<!-- end .timeline -->
+
+		<div class="clear2"></div>
+
+	</div>
+	<!-- End of full width -->
+
+	<div class="clear"></div>
+
+	<!-- Start of full width -->
+	<div class="full_width">
+
+		<div class="clear2"></div>
+
+		<!-- Start of full width -->
+		<div class="full_width">
+
+			<!-- Start of one half first -->
+			<div class="one_half_first">
+
+				<h6><span class="styled_heading">Contact</span></h6>
+
+				<form action="mailer.php" id="contact_form" method="post">
+
+					<ul class="form">
+
+						<li class="short">
+							<label>First Name<span class="required"></span>
+							</label>
+							<input type="text" name="first" id="first" value="First Name" class="requiredField" onblur="if(this.value == '') { this.value = 'First Name'; }" onfocus="if(this.value == 'First Name') { this.value = ''; }" />
+						</li>
+
+						<li class="short">
+							<label>Last Name<span class="required"></span>
+							</label>
+							<input type="text" name="last" id="last" value="Last Name" class="requiredField" onblur="if(this.value == '') { this.value = 'Last Name'; }" onfocus="if(this.value == 'Last Name') { this.value = ''; }" />
+						</li>
+
+						<li class="long">
+							<label>Email Address<span class="required"></span>
+							</label>
+							<input type="text" name="email" id="email" value="Email Address" class="requiredField email" onblur="if(this.value == '') { this.value = 'Email Address'; }" onfocus="if(this.value == 'Email Address') { this.value = ''; }" /> </li>
+
+						<li class="short">
+							<label>Company Name</label>
+							<input type="text" name="company" id="company" value="Company Name" class="requiredField" onblur="if(this.value == '') { this.value = 'Company Name'; }" onfocus="if(this.value == 'Company Name') { this.value = ''; }" />
+						</li>
+
+						<li class="short">
+							<label>Telephone Number</label>
+							<input type="text" name="phone" id="phone" value="Telephone Number" class="requiredField" onblur="if(this.value == '') { this.value = 'Telephone Number'; }" onfocus="if(this.value == 'Telephone Number') { this.value = ''; }" />
+						</li>
+
+						<li class="textarea">
+							<label>Message<span class="required"></span>
+							</label>
+							<textarea name="message" id="message" rows="20" cols="30"></textarea>
+						</li>
+
+						<li class="button">
+							<input name="submitted" id="submitted" value="Submit" class="submit" type="submit" />
+						</li>
+
+					</ul>
+
+				</form>
+
+			</div>
+			<!-- End of one half first -->
+
+			<!-- Start of one half -->
+			<div class="one_half">
+
+				<h6><span class="styled_heading">On The Web</span></h6>
+
+				<!-- Start of twitter message content -->
+				<div class="twitter_message_content">
+
+					<!-- Start of tweet -->
+					<div class="tweet">
+
+					</div>
+					<!-- End of tweet -->
+
+				</div>
+				<!-- End of twitter message content -->
+
+			</div>
+			<!-- End of one half -->
+
+		</div>
+		<!-- End of full width -->
+
+	</div>
+	<!-- End of wrapper -->
+
+	<div class="clear2"></div>
+
+	<!-- Start of footer wrapper -->
+	<div id="footer_wrapper">
+
+		<!-- Start of footer -->
+		<div class="footer">
+
+			<!-- Start of copyright -->
+
+
+			<!-- Start of social section -->
+			<div class="social_section">
+
+				<!-- Start of facebook -->
+				<div class="facebook">
+
+					<a href="http://facebook.com" target="_blank"></a>
+
+				</div>
+				<!-- End of facebook -->
+
+				<!-- Start of flickr -->
+				<div class="flickr">
+
+					<a href="http://flickr.com" target="_blank"></a>
+
+				</div>
+				<!-- End of flickr -->
+
+				<!-- Start of linkedin -->
+				<div class="linkedin">
+
+					<a href="http://linkedin.com" target="_blank"></a>
+
+				</div>
+				<!-- End of linkedin -->
+
+				<!-- Start of tweets -->
+				<div class="tweets">
+
+					<a href="http://twitter.com" target="_blank"></a>
+
+				</div>
+				<!-- End of tweets -->
+
+				<!-- Start of deviant -->
+				<div class="deviant">
+
+					<a href="http://www.deviantart.com/" target="_blank"></a>
+
+				</div>
+				<!-- End of deviant -->
+
+				<!-- Start of dribbble -->
+				<div class="dribbble">
+
+					<a href="http://dribbble.com/" target="_blank"></a>
+
+				</div>
+				<!-- End of dribbble -->
+
+			</div>
+			<!-- End of social section -->
+
+		</div>
+		<!-- End of footer -->
+
+	</div>
+	<!-- End of footer wrapper -->
+
+	<script>
+		jQuery(document).ready(function () {
+			jQuery('.skillbar').each(function () {
+				jQuery(this).find('.skillbar-bar').animate({
+					width: jQuery(this).attr('data-percent')
+				}, 6000);
+			});
+		});
+	</script>
+</body>
+
+</html>

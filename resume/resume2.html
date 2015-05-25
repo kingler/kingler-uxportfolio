@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Untitled Document</title>
+	<link href="../css/gumby.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+			font-family: 'Raleway', 'sans-serif';
+			font-size: 100%;
+			color: rgba(144, 164, 176, 1);
+		}
+
+		.container {
+			width: 100%;
+			height: 100%;
+			padding-top: 30px;
+		}
+
+		header {
+			line-height: 1.5;
+			font-weight: 200;
+			font-size: 1em;
+			width: 100%;
+			margin-top: 30px;
+			/*		border-top: 1px solid rgba(144, 164, 176, 0.4);
+			border-bottom: 1px solid rgba(144, 164, 176, 0.4);*/
+			/*background-color: rgba(144, 164, 176, 0.1);*/
+		}
+
+		.logo {
+			width: 150px;
+			/*height: 249px;*/
+		}
+
+		.download-resume,
+		.contact_me_phone,
+		.email_me,
+		.my_location,
+		.my_website,
+		.behance,
+		.linkedin,
+		.twitter {
+			margin-bottom: 30px;
+			padding-left: 50px;
+		}
+
+		.download-resume a div,
+		.contact_me_phone a div,
+		.email_me a div,
+		.my_location a div,
+		.my_website a div,
+		.behance a div,
+		.linkedin a div,
+		.twitter a div {
+			margin-top: -35px;
+			margin-left: 50px;
+		}
+
+		#download-icon,
+		#call-icon,
+		#email-icon,
+		#location-icon,
+		#website-icon,
+		#behance,
+		#linkedin,
+		#twitter {
+			width: 35px;
+			height: 35px;
+		}
+
+		svg .twitter {
+			fill: #288EC4;
+		}
+
+		.container .header-title h2 {
+			margin-top: 20px;
+		}
+
+		header h2 {
+			margin-top: 20%;
+		}
+
+		.container .header-contact {
+			padding-left: 50px;
+			margin-top: 30px;
+		}
+
+		.work-history {
+			padding: 50px;
+		}
+
+		.work-history .left {
+			padding-left: 20px;
+			padding-right: 50px;
+		}
+
+		.work-history .right {
+			padding-left: 50px;
+			padding-right: 20px
+		}
+
+		header .left {
+			padding-left: 50px;
+		}
+		/*	header .right {
+			padding-left: 50px;
+		}*/
+
+		.work-item {
+			border-top: 1px solid rgba(144, 164, 176, 0.4);
+		}
+
+		.company {
+			font-size: 16px;
+			color: #505d63;
+			font-weight: 400;
+			text-transform: uppercase;
+			padding-bottom: 10px;
+			font-weight: 700;
+		}
+
+		.work-item div {
+			font-size: 10px;
+			color: #627076;
+			display: block;
+			padding: 7px 5px 7px 28px;
+			background: url("img/calendar.png") no-repeat scroll 5px 7px #E4E7EB;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			margin-top: 20px;
+			float: right;
+		}
+
+		.work-item .position_block {
+			font-size: 16px;
+			font-weight: 400;
+			color: #fdfdfd;
+			background-color: #1098D2;
+			display: block;
+			padding: 10px 10px 10px 10px;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+
+		.about_company p {
+			color: #000;
+			text-align: justify;
+		}
+
+		.job_activities {
+			margin-bottom: 30px;
+		}
+
+		.job_activities li {
+			font-size: 14px;
+			color: rgba(0, 0, 0, .7);
+			text-align: justify;
+			padding-right: 25px;
+		}
+	</style>
+	<script>
+		$('.svg-inject').svgInject();
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<header class="row">
+			<div class="six columns left">
+				<div class="row header-title">
+					<div class="logo column"><img src="img/kingler-logo.png">
+					</div>
+					<h2 class="column">Kingler Bercy <br>Resume/CV</h2>
+				</div>
+
+				<h4>User Experience Designer</h4>
+				<p>Hi there my name is Kingler Bercy. I am a user experience designer with extensive background in designing intuitive user friendly applications for the web, desktop screens, and mobile devices. My design approach is based on four core universal principles of design: <a href="">Minimalism</a>(less is more), <a href="">Information aesthetics</a> (simplying complexity thru imagery), <a>Heuristic evaluation</a> (meaningful data), <a href="">User Centered Design</a> (descovering the needs, nants, and desires of the user). I've worked with both small business and multinational fortune five hundred companies on designing user interfaces for complex financial management systems. </p>
+			</div>
+			<div class="six columns header-contact">
+				<div class="row">
+					<div class="column">
+						<div class="download-resume">
+							<a href="">
+								<object id="download-icon" type="image/svg+xml" data="img/cloud-download.svg"></object>
+								<div>Download Resume</div>
+							</a>
+						</div>
+						<div class="contact_me_phone">
+							<a href="">
+								<object id="call-icon" type="image/svg+xml" data="img/phone3.svg"></object>
+								<div>347.414.4170</div>
+							</a>
+						</div>
+						<div class="email_me">
+							<a href="mailto:kingler@me.com">
+								<object id="email-icon" type="image/svg+xml" data="img/envelope4.svg"></object>
+								<div>kingler@me.com</div>
+							</a>
+						</div>
+						<div class="my_location">
+							<a href="">
+								<object id="location-icon" type="image/svg+xml" data="img/location2.svg"></object>
+								<div>Forest Hills, NY</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="my_website">
+							<a href="http://www.kingler.me">
+								<object id="website-icon" type="image/svg+xml" data="img/monitor.svg"></object>
+								<div>www.kingler.me</div>
+							</a>
+						</div>
+						<div class="behance">
+							<a href="https://www.behance.net/thrudesigns">
+								<object id="behance-icon" type="image/svg+xml" data="img/behance.svg"></object>
+								<div>Behance</div>
+							</a>
+						</div>
+						<div class="linkedin">
+							<a href="https://www.linkedin.com/profile/view?id=14024091&trk=nav_responsive_tab_profile_pic">
+								<object id="linkedin-icon" type="image/svg+xml" data="img/linkedin3.svg"></object>
+								<div>Linkedin</div>
+							</a>
+						</div>
+						<div class="twitter">
+							<a href="https://twitter.com/kinglerme">
+								<object class="svg-inject" type="image/svg+xml" data="img/twitter.svg"></object>
+								<div>Twitter</div>
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+
+
+			</div>
+			<div class="row">
+				<img src="http://placehold.it/499x180">
+
+			</div>
+		</header>
+		<content>
+			<div class="row work-history">
+
+				<section class="six columns left">
+
+					<div class="row work-item">
+						<h1 class="column position_block">
+							user experience designer
+						</h1>
+						<div class="column">
+							APR-07 2014 - PRESENT
+						</div>
+					</div>
+					<div class="company">
+						<span>Imagineer technology group (ITG)</span>
+					</div>
+
+					<div class="about_company">
+						<p>ITG is a software company that creates highly customizable web-based invetment managment tools for the due diligence process associated with investing in hedge funds accoss all asset classes</p>
+						<ul class="square job_activities">
+							<li>Designed and prototyped a fund management dashboard for one of ITG’s flagship software applications called FundInsight. FundInsight is a web-based platform for managing the due diligence process associated with investing in hedge funds.
+							</li>
+							<li>Conducted user and stakeholder interviews and workshops to understand behaviors patterns, pain points, and desired features prior to designing the user interface.
+							</li>
+							<li>Organized features into meaningful categories for better workflow use case modeling </li>
+							<li>Conducted heuristic evaluations of Fundinsight to identify possible enhancements or redesign opportunities
+							</li>
+							<li>Created and presented wireframe mockups and customer journey maps to stakeholders for feedback and approval
+							</li>
+							<li>Created a style guide with a full range of html elements for quickly prototyping future application module
+							</li>
+						</ul>
+					</div>
+					<div class="row work-item">
+						<h1 class="column position_block">
+							user experience designer
+						</h1>
+						<div class="column">
+							OCT-11 2014 - APR-04 2013
+						</div>
+					</div>
+					<div class="company">
+						<span>NYSE EURONEXT</span>
+					</div>
+					<div class="about_company">
+						<p>Design the user experience for process orders and managing product offers for NYSE’s administrators and account executives. Both admin and account executives should have the ability to collaborate with the client and delegate order configuration tasks during the ordering process
+						</p>
+						<ul class="square job_activities">
+							<li>Designed and prototyped a fund management dashboard for one of ITG’s flagship software applications called FundInsight. FundInsight is a web-based platform for managing the due diligence process associated with investing in hedge funds.
+							</li>
+							<li>Designed comprehensive information architectural documentation for the following application/modules of the e-commerce portal: a user permission-ing system for both internal and external users, offer management and pricing rules system, discussion and collaboration tool, and a messaging framework
+							</li>
+							<li>Collaborated with other product managers on UX standards across all applications modules
+							</li>
+							<li>Conducted weekly technical requirement meetings with the development team every sprint cycle
+							</li>
+							<li>Conducted user acceptance testing with end users and stakeholders for final product acceptance
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="six columns right">
+					<div class="row work-item">
+						<h1 class="column position_block">
+							User Experience architect
+						</h1>
+						<div class="column">
+							JUN 2013 - APR 2014
+						</div>
+					</div>
+					<div class="company">
+						<span>Standard and Poor's </span>
+					</div>
+					<div class="about_company">
+						<p>Standard & Poor's Financial Services LLC (S&P) is an financial services company. It is a division of McGraw Hill Financial that publishes financial research and analysis on stocks and bonds. I was involved in designing a web-based ratings application to assess the creditworthness of S&P's banking and corporte clients by ratings analyst.</p>
+						<ul class="square job_activities">
+							<li>Worked continuously with business analysts, developers, and the QA staff to ensure the development of intuitive applications </li>
+							<li>Created high level process flow diagrams that were presented and socialized with the user groups and product managers </li>
+							<li>Worked with the business analysts on writing user stories and use cases scenarios </li>
+							<li>CWorked on migrating 20 legacy internal applications to Liferay portal, which is an enterprise level CMS platform </li>
+						</ul>
+					</div>
+					<div class="row work-item">
+						<h1 class="column position_block">
+							User Experience designer
+						</h1>
+						<div class="column">
+							MAY-16 2010 - OCT-30 2011
+						</div>
+					</div>
+					<div class="company">
+						<span>MORGAN STANLEY SMITH BARNEY </span>
+					</div>
+					<div class="about_company">
+						<p>Standard & Poor's Financial Services LLC (S&P) is an financial services company. It is a division of McGraw Hill Financial that publishes financial research and analysis on stocks and bonds. I was involved in designing a web-based ratings application to assess the creditworthness of S&P's banking and corporte clients by ratings analyst.</p>
+						<ul class="square job_activities">
+							<li>Collaborated with stakeholders and user groups, regularly, on design iterations </li>
+							<li>Researched and analyzed human task workflow procedures and real time processes of call center agents to determine design focus and content hierarchy
+							</li>
+							<li>Create standardized CSS style sheets to control application layout consistency for both the Adobe LiveCycle Mosaic platform level and the individual Flex apps
+							</li>
+
+							<li>Created and successfully delivered information architect documentation; presenting tangible expression of strategy in the form of sketches, user flows diagrams, wireframes, and click-through PDF prototypes in high fidelity to simulate actual navigation
+							</li>
+
+							<li>Created detailed use case documentation to help facilitate learning and understanding of application functionality, intent and flow for both developers and the CSR perspective
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+
+		</content>
+		<footer>
+
+		</footer>
+
+
+	</div>
+
+
+</body>
+
+</html>
