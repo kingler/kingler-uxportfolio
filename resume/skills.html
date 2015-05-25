@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Kingler's Skills Chart</title>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700' rel='stylesheet' type='text/css'>
+	<script src="../js/jquery-2.1.1.js"></script>
+	<script src="js/jquery.circlechart.js"></script>
+	<style>
+		body {}
+
+		.wrapper {
+			margin-left: 125px;
+			text-align: center;
+			max-width: 1280px;
+		}
+
+		.skills > div {
+			float: left;
+			margin: 20px;
+			font-family: 'Raleway', sans-serif;
+			color: #101524;
+			text-align: left;
+			width: 175px;
+		}
+
+		.skills div em {
+			font-size: 12px;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="skills">
+			<div class="skill-1" data-percent="65"><em>UX Research</em>
+			</div>
+			<div class="skill-2" data-percent="75"><em>Information Architecture</em>
+			</div>
+			<div class="skill-3" data-percent="85"><em>User Interface Design</em>
+			</div>
+
+
+			<div class="skill-4" data-percent="75"><em>Software Prototyping</em>
+			</div>
+			<div class="skill-5" data-percent="65"><em>High Fedility Mockups</em>
+			</div>
+			<div class="skill-6" data-percent="65"><em>Style Guide</em>
+			</div>
+			<div class="skill-7" data-percent="65"><em>Usability Testing</em>
+			</div>
+			<div class="skill-8" data-percent="65"><em>HTML</em>
+			</div>
+			<div class="skill-9" data-percent="65"><em>CSS</em>
+			</div>
+			<div class="skill-10" data-percent="65"><em>Javascript</em>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.skill-1').percentcircle();
+
+		$('.skill-2').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 3,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#E95546',
+			percentSize: '15px',
+			percentWeight: 'normal'
+		});
+
+		$('.skill-3').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 3,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#DA4453',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-4').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 3,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#46CFB0',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-5').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 3,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#8BC163',
+			percentSize: '18px',
+			percentWeight: '20px'
+		});
+		$('.skill-6').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-7').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-8').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-9').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-10').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+	</script>
+</body>
+
+</html>

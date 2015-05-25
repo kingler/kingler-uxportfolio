@@ -6,11 +6,21 @@
 	<title>Untitled Document</title>
 	<link href="../css/gumby.css" rel="stylesheet" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.circlechart.js"></script>
 	<style>
 		body {
 			font-family: 'Raleway', 'sans-serif';
 			font-size: 100%;
-			color: rgba(144, 164, 176, 1);
+			color: #101524;
+			background-color: white;
+		}
+
+		a {
+			color: #C14109;
+		}
+
+		a:hover {
+			color: #2F87E0;
 		}
 
 		.container {
@@ -35,40 +45,70 @@
 			/*height: 249px;*/
 		}
 
+		header h4 {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
 		.download-resume,
+		.my_website {
+			margin-bottom: 30px;
+			padding-left: 50px;
+		}
+
 		.contact_me_phone,
 		.email_me,
 		.my_location,
-		.my_website,
 		.behance,
+		.pinterest,
 		.linkedin,
 		.twitter {
 			margin-bottom: 30px;
 			padding-left: 50px;
 		}
 
-		.download-resume a div,
 		.contact_me_phone a div,
 		.email_me a div,
 		.my_location a div,
-		.my_website a div,
 		.behance a div,
+		.pinterest a div,
 		.linkedin a div,
 		.twitter a div {
 			margin-top: -35px;
 			margin-left: 50px;
+			font-weight: 400;
+			font-size: 14px;
+			color: #101524;
 		}
 
 		#download-icon,
+		#website-icon {
+			width: 50px;
+			height: 50px;
+		}
+
 		#call-icon,
 		#email-icon,
 		#location-icon,
-		#website-icon,
-		#behance,
-		#linkedin,
-		#twitter {
+		#behance-icon,
+		#pinterest-icon,
+		#linkedin-icon,
+		#twitter-icon {
 			width: 35px;
 			height: 35px;
+		}
+
+		.download-resume a div,
+		.my_website a div {
+			margin-top: -44px;
+			margin-left: 70px;
+			font-weight: 600;
+			font-size: 16px;
+			color: #101524;
+		}
+
+		.follow-me {
+			margin-top: 100px;
 		}
 
 		svg .twitter {
@@ -77,6 +117,7 @@
 
 		.container .header-title h2 {
 			margin-top: 20px;
+			text-transform: uppercase;
 		}
 
 		header h2 {
@@ -88,8 +129,17 @@
 			margin-top: 30px;
 		}
 
+		.header-contact .left-side,
+		.header-contact .right-side {
+			margin-top: 110px;
+		}
+
+		.header-contact .right-side {
+			margin-left: 75px;
+		}
+
 		.work-history {
-			padding: 50px;
+			padding: 0px 50px 50px 50px;
 		}
 
 		.work-history .left {
@@ -109,9 +159,12 @@
 			padding-left: 50px;
 		}*/
 
-		.work-item {
-			border-top: 1px solid rgba(144, 164, 176, 0.4);
+		content {
+			padding-left: 50px;
+			width: 100%;
 		}
+
+		.work-item {}
 
 		.company {
 			font-size: 16px;
@@ -161,20 +214,148 @@
 			text-align: justify;
 			padding-right: 25px;
 		}
+
+		.skills {
+			/*padding: 0px 50px 0px 50px;*/
+
+			max-width: 1280px;
+		}
+
+		.skills iframe {}
+
+		.h-line {
+			height: 1px;
+			margin: 10px auto;
+			width: 100%;
+			border-top: 1px solid rgba(144, 164, 176, 0.4);
+		}
+
+		.section-title {
+			background-color: #ffffff;
+			width: 100%;
+			margin-left: 50px;
+			font-weight: 700;
+		}
+
+		ul.events {
+			list-style-type: none;
+			margin: 0px 50px 0 50px;
+			padding-top: 10px;
+		}
+
+		ul.events li {
+			border: none;
+			color: #ffffff;
+			font-size: 11px;
+			font-weight: normal;
+			margin-bottom: 23px;
+			padding: 8px 0 8px 0;
+			position: relative;
+			text-align: center;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+
+		ul.events li em {
+			color: #707070;
+			font-weight: normal;
+			font-size: 10px;
+		}
+
+		ul.intervals {
+			list-style-type: none;
+			padding: 0;
+			display: block;
+			width: 100%;
+		}
+
+		.top-bar {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+
+		.top-bar h3 {
+			font-weight: 600;
+		}
+
+		ul.intervals li {
+			color: #505d63;
+			float: left;
+			font-size: 15px;
+			margin: 0;
+			padding: 15px 0;
+			text-align: center;
+			width: 14%;
+		}
+
+		.intervals .first {
+			width: 9%;
+		}
+
+		.intervals .second {
+			width: 25%;
+		}
+
+		.intervals .third {
+			width: 15%;
+		}
+
+		.intervals .fourth {
+			width: 21%;
+		}
+
+		.intervals .last {
+			width: 30%;
+		}
+
+		.gold {
+			background-color: #DD900A !important;
+		}
+
+		.green {
+			background-color: #1B9E0E !important;
+		}
+
+		.gray {
+			background-color: #7E929F !important;
+		}
+
+		.blue {
+			background-color: #16A2DE !important;
+		}
+
+		.red {
+			background-color: #D44924 !important;
+		}
+
+		.dark {
+			background-color: #627076 !important;
+		}
+
+		.light {
+			background-color: #1B9E0E !important;
+			color: #fff !important;
+		}
 	</style>
-	<script>
-		$('.svg-inject').svgInject();
-	</script>
+
 </head>
 
 <body>
 	<div class="container">
+		<div class="column top-bar">
+			<h3>Resume/CV</h3>
+		</div>
 		<header class="row">
 			<div class="six columns left">
 				<div class="row header-title">
-					<div class="logo column"><img src="img/kingler-logo.png">
+					<div class="logo column">
+						<img src="img/kingler-logo.png">
 					</div>
-					<h2 class="column">Kingler Bercy <br>Resume/CV</h2>
+					<div class="column">
+						<h2>Kingler<strong>Bercy</strong></h2>
+						<em>User Experience Designer</em>
+					</div>
 				</div>
 
 				<h4>User Experience Designer</h4>
@@ -182,13 +363,21 @@
 			</div>
 			<div class="six columns header-contact">
 				<div class="row">
-					<div class="column">
-						<div class="download-resume">
-							<a href="">
-								<object id="download-icon" type="image/svg+xml" data="img/cloud-download.svg"></object>
-								<div>Download Resume</div>
-							</a>
-						</div>
+					<div class="download-resume column">
+						<a href="">
+							<object id="download-icon" type="image/svg+xml" data="img/cloud-download.svg"></object>
+							<div>Download Resume</div>
+						</a>
+					</div>
+					<div class="my_website column">
+						<a href="http://www.kingler.me">
+							<object id="website-icon" type="image/svg+xml" data="img/monitor.svg"></object>
+							<div>www.kingler.me</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column left-side">
 						<div class="contact_me_phone">
 							<a href="">
 								<object id="call-icon" type="image/svg+xml" data="img/phone3.svg"></object>
@@ -209,13 +398,8 @@
 						</div>
 					</div>
 
-					<div class="column">
-						<div class="my_website">
-							<a href="http://www.kingler.me">
-								<object id="website-icon" type="image/svg+xml" data="img/monitor.svg"></object>
-								<div>www.kingler.me</div>
-							</a>
-						</div>
+					<div class="column right-side">
+
 						<div class="behance">
 							<a href="https://www.behance.net/thrudesigns">
 								<object id="behance-icon" type="image/svg+xml" data="img/behance.svg"></object>
@@ -230,23 +414,29 @@
 						</div>
 						<div class="twitter">
 							<a href="https://twitter.com/kinglerme">
-								<object class="svg-inject" type="image/svg+xml" data="img/twitter.svg"></object>
+								<object id="twitter-icon" type="image/svg+xml" data="img/twitter.svg"></object>
 								<div>Twitter</div>
+							</a>
+						</div>
+						<div class="pinterest">
+							<a href="https://twitter.com/kinglerme">
+								<object id="pinterest-icon" type="image/svg+xml" data="img/pinterest4.svg"></object>
+								<div>Pinterest</div>
 							</a>
 						</div>
 
 					</div>
 				</div>
-
-
-
-			</div>
-			<div class="row">
-				<img src="http://placehold.it/499x180">
-
 			</div>
 		</header>
 		<content>
+			<h4 class="row"><span class="section-title">Technical Skills</span></h4>
+			<div class="h-line"></div>
+			<div class="skills row">
+				<iframe src="skills.html" width="1280" height="400"></iframe>
+			</div>
+			<h4 class="row"><span class="section-title">Work Experience</span></h4>
+			<div class="h-line"></div>
 			<div class="row work-history">
 
 				<section class="six columns left">
@@ -281,7 +471,7 @@
 					</div>
 					<div class="row work-item">
 						<h1 class="column position_block">
-							user experience designer
+							Product Manager | UX Architect
 						</h1>
 						<div class="column">
 							OCT-11 2014 - APR-04 2013
@@ -357,6 +547,36 @@
 					</div>
 				</section>
 			</div>
+			<!-- end of work-history -->
+
+			<!-- beginning of work timeline -->
+			<h4 class="row"><span class="section-title">Project Timeline</span></h4>
+			<div class="h-line"></div>
+			<div class="row">
+				<div class="timeline">
+					<!-- width=the length that will display - left=100 less width set ie 100-42=58 etc etc -->
+					<ul class="events">
+						<li class="gold" style="width: 30%; left: 70%;">Imagineer technology group </li>
+						<li class="red" style="width: 21%; left: 49%;">Standard and Poor's</li>
+						<li class="green" style="width: 15%; left: 34%;">NYSE </li>
+						<li class="blue" style="width: 25%; left: 9%;">MORGAN STANLEY</li>
+						<li class="gray" style="width: 9%; left: 0%;">INFONIC AG </li>
+					</ul>
+					<!-- end .events -->
+					<div class="h-line"></div>
+					<ul class="intervals">
+						<li class="first">2011</li>
+						<li class="second">2012</li>
+						<li class="third">2013</li>
+						<li class="fourth">2014</li>
+						<li class="last">2015</li>
+					</ul>
+					<!-- end .intervals -->
+				</div>
+				<!-- end .timeline -->
+				<div class="clear2"></div>
+			</div>
+			<div class="h-line"></div>
 
 		</content>
 		<footer>
@@ -365,7 +585,61 @@
 
 
 	</div>
+	<script>
+		$('.skill-1').percentcircle();
 
+		$('.skill-2').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 3,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#E95546',
+			percentSize: '15px',
+			percentWeight: 'normal'
+		});
+
+		$('.skill-3').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 3,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#DA4453',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-4').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 3,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#46CFB0',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-5').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 3,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#8BC163',
+			percentSize: '18px',
+			percentWeight: '20px'
+		});
+		$('.skill-6').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+	</script>
 
 </body>
 
