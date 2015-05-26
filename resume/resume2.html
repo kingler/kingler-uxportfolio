@@ -40,6 +40,12 @@
 			/*background-color: rgba(144, 164, 176, 0.1);*/
 		}
 
+		header .left {
+			border-right: 1px dotted #000;
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+
 		.logo {
 			width: 150px;
 			/*height: 249px;*/
@@ -54,6 +60,7 @@
 		.my_website {
 			margin-bottom: 30px;
 			padding-left: 50px;
+			margin-top: 30px;
 		}
 
 		.contact_me_phone,
@@ -116,7 +123,7 @@
 		}
 
 		.container .header-title h2 {
-			margin-top: 20px;
+			margin-top: 50px;
 			text-transform: uppercase;
 		}
 
@@ -131,7 +138,12 @@
 
 		.header-contact .left-side,
 		.header-contact .right-side {
-			margin-top: 110px;
+			margin-top: 70px;
+		}
+
+		.header-contact .left-side h4,
+		.header-contact .right-side h4 {
+			padding-left: 50px;
 		}
 
 		.header-contact .right-side {
@@ -151,13 +163,6 @@
 			padding-left: 50px;
 			padding-right: 20px
 		}
-
-		header .left {
-			padding-left: 50px;
-		}
-		/*	header .right {
-			padding-left: 50px;
-		}*/
 
 		content {
 			padding-left: 50px;
@@ -337,6 +342,66 @@
 			background-color: #1B9E0E !important;
 			color: #fff !important;
 		}
+
+		.timeline-bg {
+			/***  CSS Gradient  ***/
+			/*  Chrome 1-9 and Safari 4-5.0  */
+
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop( 0.0, rgba(255, 255, 255, 1)), color-stop( 1.0, rgba(231, 235, 238, .50)));
+			/*  Chrome 10+ Safari 5.1+ Mobile Safari  */
+
+			background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 1), rgba(231, 235, 238, .5));
+			/*  Firefox 3.6+  */
+
+			background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 1), rgba(231, 235, 238, .5));
+			/*  IE 10+  */
+
+			background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 1), rgba(231, 235, 238, .5));
+			/*  Opera 11.10+  */
+
+			background-image: -o-linear-gradient(top, rgba(255, 255, 255, 1), rgba(231, 235, 238, .5));
+			/*  W3C  */
+
+			background-image: linear-gradient(top, rgba(255, 255, 255, 1), rgba(231, 235, 238, .5));
+		}
+
+		.lgt_block {
+			float: right;
+			font-size: 10px;
+			color: #627076;
+			display: block;
+			float: right;
+			padding: 5px 5px 5px 28px;
+			background: url("img/calendar.png") no-repeat scroll 5px 7px #E4E7EB;
+			margin-top: 50px;
+		}
+
+		.drk_block {
+			float: left;
+			font-size: 10px;
+			color: #fdfdfd;
+			background-color: #627076;
+			display: block;
+			padding: 7px 10px 5px 10px;
+			clear: both;
+			margin-bottom: 30px;
+			margin-top: -35px;
+		}
+
+		.education {
+			height: 500px;
+			width: 100%;
+		}
+
+		.education-statement {
+			margin-top: 100px;
+		}
+
+		footer {
+			height: 500px;
+			background-color: #222a38;
+			width: 100%;
+		}
 	</style>
 
 </head>
@@ -354,7 +419,6 @@
 					</div>
 					<div class="column">
 						<h2>Kingler<strong>Bercy</strong></h2>
-						<em>User Experience Designer</em>
 					</div>
 				</div>
 
@@ -378,6 +442,7 @@
 				</div>
 				<div class="row">
 					<div class="column left-side">
+						<h4>contact me</h4>
 						<div class="contact_me_phone">
 							<a href="">
 								<object id="call-icon" type="image/svg+xml" data="img/phone3.svg"></object>
@@ -399,7 +464,7 @@
 					</div>
 
 					<div class="column right-side">
-
+						<h4>Follow Me</h4>
 						<div class="behance">
 							<a href="https://www.behance.net/thrudesigns">
 								<object id="behance-icon" type="image/svg+xml" data="img/behance.svg"></object>
@@ -430,7 +495,7 @@
 			</div>
 		</header>
 		<content>
-			<h4 class="row"><span class="section-title">Technical Skills</span></h4>
+			<h4 class="row"><span class="section-title">Technical Skills</span>&nbsp;proficiency level</h4>
 			<div class="h-line"></div>
 			<div class="skills row">
 				<iframe src="skills.html" width="1280" height="400"></iframe>
@@ -553,7 +618,7 @@
 			<h4 class="row"><span class="section-title">Project Timeline</span></h4>
 			<div class="h-line"></div>
 			<div class="row">
-				<div class="timeline">
+				<div class="timeline timeline-bg">
 					<!-- width=the length that will display - left=100 less width set ie 100-42=58 etc etc -->
 					<ul class="events">
 						<li class="gold" style="width: 30%; left: 70%;">Imagineer technology group </li>
@@ -576,10 +641,42 @@
 				<!-- end .timeline -->
 				<div class="clear2"></div>
 			</div>
+			<h4 class="row"><span class="section-title">Education</span></h4>
 			<div class="h-line"></div>
+			<div class="education row">
+				<div class="six columns">
+					<span class="small_heading">Virginia State University</span>
+					<div class="lgt_block">
+						AUG 1997 - MAY 2010
+					</div>
+					<div class="drk_block">
+						MAJORED IN: Fine Arts & Economics
+					</div>
+					<div class="education-statement">
+						<p>I went to Virginia state University in 1998 and studied fine arts and then economics. I took economics because I figured if I understood the way the economy works my dyslexia wouldn’t matter because I figured I can make enough money to pay someone to read for me. I dropout of collage due to financial reasons. I left my junior year with 36 credit left to take. My plan was to return once I had saved enough money, which never happened. Instead I started my first business seeing t-shirts and painted graffiti on jeans. After my t-shirt business I went into financial industry as a loan originator for mortgages and small business loans.</p>
+
+					</div>
+				</div>
+
+				<div class="six columns">
+					<span class="small_heading">University Of Self-Taught</span>
+					<div class="lgt_block">
+						AUG 2010 - MAY 2011
+					</div>>
+					<div class="drk_block">
+						MAJORED IN: Fine Arts & Economics
+					</div>
+					<div class="education-statement">
+						<p>I feel that education as we know it today is not aligned with supply and demand in the real world. Using the internet I taught myself photoshop, Illustrator, dreamweaver, fireworks, and to code html, css, javascript, java, python, and php. Although i’m not supper high level coder I am able to build any application idea that comes to mind. I have learned more being out of school then if you would have stayed. The internet has been a hug part of my learning I can learn things that are actually useful. Plus I can learn much more in less time and have fun along the way. It has helped me develop the unique 'set' of skills that are requirements for this position. Strange combinations of skills can give serendipitous results. I know now that owning a diploma does not give you a right to a job or success, it cannot insure your future. Only you can. </p>
+
+					</div>
+
+				</div>
+			</div>
 
 		</content>
 		<footer>
+
 
 		</footer>
 
