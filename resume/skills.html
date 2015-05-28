@@ -4,63 +4,316 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Kingler's Skills Chart</title>
+	<link href="../css/gumby.css" rel="stylesheet" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700' rel='stylesheet' type='text/css'>
 	<script src="../js/jquery-2.1.1.js"></script>
 	<script src="js/jquery.circlechart.js"></script>
-	<style>
-		body {}
-
-		.wrapper {
-			margin-left: 125px;
-			text-align: center;
-			max-width: 1280px;
-		}
-
-		.skills > div {
-			float: left;
-			margin: 20px;
+	<!--	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
 			font-family: 'Raleway', sans-serif;
 			color: #101524;
-			text-align: left;
-			width: 175px;
+			margin: 0 auto;
 		}
 
-		.skills div em {
+		.wrapper {}
+
+		.skills {}
+
+		.skills div div > div {}
+
+		.skills div div div em {
 			font-size: 12px;
+			text-align: left;
+			display: block;
+			width: 200px;
+			line-height: 60px;
+			padding: 10px;
+		}
+
+		.ux-skills,
+		.software-skills,
+		.web-skills {
+			width: 300px;
+			float: left;
+			margin-top: 30px;
+		}
+
+		.ux-skills span,
+		.software-skills span,
+		.web-skills span {
 			text-align: center;
 		}
+
+		div div [data-percent] {
+
+			margin: 0 auto;
+		}
+
+		.skill-1,
+		.skill-2,
+		.skill-3,
+		.skill-4,
+		.skill-5,
+		.skill-6,
+		.skill-7,
+		.skill-8,
+		.skill-9,
+		.skill-10,
+		.skill-11,
+		.skill-12,
+		.skill-13,
+		.skill-14,
+		.skill-15,
+		.skill-16,
+		.skill-17,
+		.skill-18 {
+			margin-top: 30px;
+			margin-left: 30px;
+			margin: auto;
+		}
+
+		.left {
+			float: left;
+			width: 100%;
+			padding-left: 40%;
+		}
+
+		.right {
+			float: right;
+			width: 100%;
+			padding-left: 100%;
+		}
+
+		@media only screen and (max-width: 320px) {
+			.wrapper {
+				width: 320px;
+				margin: 0 auto;
+			}
+			.skills {}
+		}
+	</style>-->
+	<style>
+		body {
+			width: 100%;
+			height: 100%;
+		}
+
+		.wrapper {
+			width: 56.25em;
+			margin: 1.88em auto;
+		}
+
+		.ux-skills,
+		.software-skills,
+		.web-skills {
+			margin-right: 15%;
+			float: left;
+			margin: auto;
+			padding: 0.63em;
+			width: 300px;
+		}
+
+		.wrapper div span {
+			display: block;
+			width: 300px;
+			text-align: center;
+		}
+
+		.skill-1,
+		.skill-2,
+		.skill-3,
+		.skill-4,
+		.skill-5,
+		.skill-6,
+		.skill-7,
+		.skill-8,
+		.skill-9,
+		.skill-10,
+		.skill-11,
+		.skill-12,
+		.skill-13,
+		.skill-14,
+		.skill-15,
+		.skill-16,
+		.skill-17,
+		.skill-18 {
+			width: 6.25em;
+			float: left;
+			margin: auto;
+		}
+
+		div [data-percent] {
+			margin-top: 10px;
+			padding-left: 10px;
+			text-align: center;
+		}
+
+		.wrapper .ux-skills div em,
+		.wrapper .software-skills div em,
+		.wrapper .web-skills div em {
+			display: block;
+			padding-bottom: 10px;
+			padding-top: 20px;
+		}
 	</style>
+
 </head>
 
 <body>
+	<!--	<div class="wrapper row">
+		<div class="skills twelve columns">
+			<div class="ux-skills row">
+				<span>UX Skills</span>
+				<div class="three columns">
+					<div class="left">
+						<div class="skill-1" data-percent="65"><em>Research</em>
+						</div>
+						<div class="skill-2" data-percent="75"><em>IA</em>
+						</div>
+						<div class="skill-3" data-percent="85"><em>UI Design</em>
+						</div>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="right">
+						<div class="skill-4" data-percent="75"><em>Prototyping</em>
+						</div>
+						<div class="skill-5" data-percent="65"><em>Style Guide</em>
+						</div>
+						<div class="skill-6" data-percent="65"><em>Usability</em>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="software-skills row">
+				<span>Software Skills</span>
+				<div class="three columns">
+					<div class="left">
+						<div class="skill-7" data-percent="75"><em>Photoshop</em>
+						</div>
+						<div class="skill-8" data-percent="65"><em>Illustrator</em>
+						</div>
+						<div class="skill-9" data-percent="65"><em>Indesign</em>
+						</div>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="right">
+						<div class="skill-10" data-percent="65"><em>Axure</em>
+						</div>
+						<div class="skill-11" data-percent="65"><em>Brackets</em>
+						</div>
+						<div class="skill-12" data-percent="65"><em>MS Visio</em>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="web-skills row">
+				<span>Web Skills</span>
+				<div class="three columns">
+					<div class="left">
+						<div class="skill-13" data-percent="65"><em>HTML</em>
+						</div>
+						<div class="skill-14" data-percent="65"><em>CSS</em>
+						</div>
+						<div class="skill-15" data-percent="65"><em>Javascript</em>
+						</div>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="right">
+						<div class="skill-16" data-percent="65"><em>PHP</em>
+						</div>
+						<div class="skill-17" data-percent="65"><em>Drupal</em>
+						</div>
+						<div class="skill-18" data-percent="65"><em>Laravel</em>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>-->
 	<div class="wrapper">
-		<div class="skills">
-			<div class="skill-1" data-percent="65"><em>UX Research</em>
+		<div class="ux-skills">
+			<span>UX Skills</span>
+			<div class="skill-1" data-percent="65"><em>Research</em>
 			</div>
-			<div class="skill-2" data-percent="75"><em>Information Architecture</em>
+			<div class="skill-2" data-percent="75"><em>IA</em>
 			</div>
-			<div class="skill-3" data-percent="85"><em>User Interface Design</em>
+			<div class="skill-3" data-percent="85"><em>UI Design</em>
 			</div>
 
-
-			<div class="skill-4" data-percent="75"><em>Software Prototyping</em>
+			<div class="skill-4" data-percent="75"><em>Prototyping</em>
 			</div>
-			<div class="skill-5" data-percent="65"><em>High Fedility Mockups</em>
+			<div class="skill-5" data-percent="65"><em>Style Guide</em>
 			</div>
-			<div class="skill-6" data-percent="65"><em>Style Guide</em>
-			</div>
-			<div class="skill-7" data-percent="65"><em>Usability Testing</em>
-			</div>
-			<div class="skill-8" data-percent="65"><em>HTML</em>
-			</div>
-			<div class="skill-9" data-percent="65"><em>CSS</em>
-			</div>
-			<div class="skill-10" data-percent="65"><em>Javascript</em>
+			<div class="skill-6" data-percent="65"><em>Usability</em>
 			</div>
 		</div>
+
+
+		<div class="software-skills">
+			<span>Software Skills</span>
+			<div class="skill-7" data-percent="75"><em>Photoshop</em>
+			</div>
+			<div class="skill-8" data-percent="65"><em>Illustrator</em>
+			</div>
+			<div class="skill-9" data-percent="65"><em>Indesign</em>
+			</div>
+
+			<div class="skill-10" data-percent="65"><em>Axure</em>
+			</div>
+			<div class="skill-11" data-percent="65"><em>Brackets</em>
+			</div>
+			<div class="skill-12" data-percent="65"><em>MS Visio</em>
+			</div>
+		</div>
+
+
+		<div class="web-skills">
+			<span>Web Skills</span>
+			<div class="skill-13" data-percent="65"><em>HTML</em>
+			</div>
+			<div class="skill-14" data-percent="65"><em>CSS</em>
+			</div>
+			<div class="skill-15" data-percent="65"><em>Javascript</em>
+			</div>
+
+			<div class="skill-16" data-percent="65"><em>PHP</em>
+			</div>
+			<div class="skill-17" data-percent="65"><em>Drupal</em>
+			</div>
+			<div class="skill-18" data-percent="65"><em>Laravel</em>
+			</div>
+		</div>
+
+
 	</div>
+
+
+
+
+
+
+
+
+
+
 	<script>
 		$('.skill-1').percentcircle();
+		({
+			animate: true,
+			diameter: 50,
+			guage: 4,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#243240',
+			percentSize: '15px',
+			percentWeight: 'normal',
+
+		});
 
 		$('.skill-2').percentcircle({
 			animate: true,
@@ -68,9 +321,9 @@
 			guage: 3,
 			coverBg: '#fff',
 			bgColor: '#efefef',
-			fillColor: '#E95546',
+			fillColor: '#243240',
 			percentSize: '15px',
-			percentWeight: 'normal'
+			percentWeight: 'normal',
 		});
 
 		$('.skill-3').percentcircle({
@@ -79,9 +332,9 @@
 			guage: 3,
 			coverBg: '#fff',
 			bgColor: '#efefef',
-			fillColor: '#DA4453',
+			fillColor: '#243240',
 			percentSize: '18px',
-			percentWeight: 'normal'
+			percentWeight: 'normal',
 		});
 		$('.skill-4').percentcircle({
 			animate: true,
@@ -144,6 +397,86 @@
 			percentWeight: 'normal'
 		});
 		$('.skill-10').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-11').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-12').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-13').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-14').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-15').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-16').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-17').percentcircle({
+			animate: true,
+			diameter: 100,
+			guage: 10,
+			coverBg: '#fff',
+			bgColor: '#efefef',
+			fillColor: '#D870A9',
+			percentSize: '18px',
+			percentWeight: 'normal'
+		});
+		$('.skill-18').percentcircle({
 			animate: true,
 			diameter: 100,
 			guage: 10,

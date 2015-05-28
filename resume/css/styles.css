@@ -1,0 +1,208 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 101%;
+}
+
+body {
+	background-color: #fff;
+	font-size: 62.5%;
+	padding-bottom: 65px;
+	font-family: "Raleway", sans-serif;
+}
+
+h1 {
+	color: #454545;
+	font-size: 3.6em;
+	margin-bottom: 6px;
+}
+
+h2 {
+	color: #484848;
+	font-size: 2.5em;
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+
+h3 {
+	color: #777;
+	font-weight: normal;
+	font-size: 1.8em;
+	margin-bottom: 10px;
+}
+
+h4 {
+	color: #656565;
+	font-weight: bold;
+	font-size: 1.75em;
+	margin-bottom: 4px;
+}
+
+p {
+	color: #565656;
+	font-size: 1.8em;
+	line-height: 1.4em;
+	margin-bottom: 15px;
+	padding-left: 35px;
+}
+
+.mobile-view {
+	display: none;
+}
+
+ul {
+	display: block;
+	list-style: none;
+}
+
+ul li {
+	padding-left: 45px;
+	list-style-type: none;
+	vertical-align: top;
+	background: url('images/bullet.png') 25px 5px no-repeat;
+	margin-bottom: 5px;
+	color: #666;
+	font-size: 1.6em;
+	line-height: 2.3em;
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+}
+
+a {
+	color: #5582d6;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+/** @group core layout **/
+
+#container-wrapper {
+	margin: 70px 50px 50px 50px;
+	padding: 20px 20px;
+	padding-top: 35px;
+	min-width: 260px;
+	max-width: 1280px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 8px;
+}
+
+header {
+	width: 100%;
+}
+/** @group personal settings **/
+
+#info {
+	margin-bottom: 12px;
+}
+
+#photo {}
+
+#photo img {}
+/** @group skills **/
+
+#skills-left {
+	display: block;
+	float: left;
+	margin-right: 30px;
+}
+
+#skills-right {
+	display: block;
+	float: left;
+}
+/** @group clearfix **/
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.download-resume,
+.my_website {
+	margin-bottom: 30px;
+	padding-left: 50px;
+	margin-top: 30px;
+}
+
+.contact_me_phone,
+.email_me,
+.my_location,
+.behance,
+.pinterest,
+.linkedin,
+.twitter {
+	margin-bottom: 30px;
+	padding-left: 50px;
+}
+
+.contact_me_phone a div,
+.email_me a div,
+.my_location a div,
+.behance a div,
+.pinterest a div,
+.linkedin a div,
+.twitter a div {
+	margin-top: -35px;
+	margin-left: 50px;
+	font-weight: 400;
+	font-size: 14px;
+	color: #101524;
+}
+
+#download-icon,
+#website-icon {
+	width: 50px;
+	height: 50px;
+}
+
+#call-icon,
+#email-icon,
+#location-icon,
+#behance-icon,
+#pinterest-icon,
+#linkedin-icon,
+#twitter-icon {
+	width: 35px;
+	height: 35px;
+}
+
+.download-resume a div,
+.my_website a div {
+	margin-top: -44px;
+	margin-left: 70px;
+	font-weight: 600;
+	font-size: 16px;
+	color: #101524;
+}
+
+.follow-me {
+	margin-top: 100px;
+}

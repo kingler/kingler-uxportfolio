@@ -5,18 +5,19 @@
 			//Set the default values, use comma to separate the settings, example:
 			var defaults = {
 					animate: true,
-					diameter: 100,
-					guage: 6,
+					diameter: 50,
+					guage: 4,
 					coverBg: '#fff',
 					bgColor: '#efefef',
 					fillColor: '#243240',
 					percentSize: '15px',
-					percentWeight: 'normal'
+					percentWeight: 'normal',
 				},
 				styles = {
 					cirContainer: {
 						'width': defaults.diameter,
-						'height': defaults.diameter
+						'height': defaults.diameter,
+						'margin': 'auto'
 					},
 					cir: {
 						'position': 'relative',
