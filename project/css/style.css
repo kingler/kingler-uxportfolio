@@ -40,8 +40,6 @@ Main Components
 }
 
 .projects-container::before {
-	/* never visible - this is used in jQuery to check the current MQ */
-
 	content: 'mobile';
 	display: none;
 }
@@ -57,8 +55,6 @@ Main Components
 	-webkit-transition: -webkit-transform 0.4s;
 	-moz-transition: -moz-transform 0.4s;
 	transition: transform 0.4s;
-	/* on mobile -  move items outside the viewport */
-
 	-webkit-transform: translateX(-100%);
 	-moz-transform: translateX(-100%);
 	-ms-transform: translateX(-100%);
@@ -67,8 +63,6 @@ Main Components
 }
 
 .projects-container li::after {
-	/* background image */
-
 	margin-top: -30px;
 	content: '';
 	position: absolute;
@@ -86,8 +80,6 @@ Main Components
 }
 
 .projects-container li::before {
-	/* never visible - this is used in jQuery to detect if the background image has been loaded  */
-
 	content: 'img/img-1-small.png';
 	display: none;
 }
@@ -129,8 +121,6 @@ Main Components
 }
 
 .projects-container li.is-loaded {
-	/* move items in the viewport when background images have been loaded */
-
 	background-color: rgba(166, 182, 182, 0.3);
 	border-bottom: 5px solid white;
 	-webkit-transform: translateX(0);
@@ -141,8 +131,6 @@ Main Components
 }
 
 .projects-container li.is-full-width {
-	/* selected item */
-
 	top: 0;
 	height: auto;
 	z-index: 1;
@@ -168,8 +156,6 @@ Main Components
 	z-index: 1;
 	width: 44px;
 	height: 44px;
-	/* image replacement */
-
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
@@ -264,6 +250,11 @@ Main Components
 	visibility: visible;
 	opacity: 1;
 	margin-top: 92vh;
+}
+
+.is-full-width .cd-project-info .project-skills {
+	width: 100%;
+	height: 400px;
 }
 
 .cd-project-info p {
@@ -382,8 +373,6 @@ Main Components
 
 @media only screen and (min-width: 1024px) {
 	.projects-container::before {
-		/* never visible - this is used in jQuery to check the current MQ */
-
 		content: 'desktop';
 	}
 	.projects-container li {
@@ -475,8 +464,6 @@ Main Components
 		opacity: 0;
 	}
 	.projects-container li.is-loaded {
-		/* show items when background images have been loaded */
-
 		background-color: rgba(166, 182, 192, .3);
 		border-left: 1px solid white;
 		border-right: 1px solid white;
@@ -486,13 +473,13 @@ Main Components
 		opacity: 1;
 	}
 	.projects-container li.is-full-width {
-		/* selected item */
-
 		left: 0vw;
 		width: 100vw;
 		-webkit-transition: width 0.4s 0s, z-index 0s 0s, left 0.4s 0s;
 		-moz-transition: width 0.4s 0s, z-index 0s 0s, left 0.4s 0s;
 		transition: width 0.4s 0s, z-index 0s 0s, left 0.4s 0s;
+		border-right: 0px sold white;
+		border-left: 0px sold white;
 	}
 	.cd-title {
 		top: 30vh;
@@ -516,8 +503,6 @@ Main Components
 		transition: transform 0.6s, opacity 0.6s, left 0.4s;
 	}
 	.is-loaded.is-full-width .cd-title {
-		/*left: 37.5vw;*/
-
 		margin-left: 0px;
 		-webkit-transition: -webkit-transform 0.6s, opacity 0s, left 0.4s;
 		-moz-transition: -moz-transform 0.8s, opacity 0s, left 0.4s;
@@ -557,8 +542,6 @@ Main Components
 		opacity: 1;
 	}
 	.projects-container li::after {
-		/*background-attachment: fixed;*/
-
 		-webkit-transform: scale(1.4);
 		-moz-transform: scale(1.4);
 		-ms-transform: scale(1.4);
@@ -600,6 +583,12 @@ Main Components
 	.is-full-width .cd-project-info {
 		margin-top: 92vh;
 	}
+	.right {
+		padding-right: 50px;
+	}
+	.left {
+		padding-right: 50px;
+	}
 }
 
 @media only screen and (min-width: 1920px) {
@@ -630,6 +619,12 @@ Main Components
 		margin-left: 21.13em;
 		margin-right: 3.13em;
 		padding: 0px 50px 0px 50px !important;
+	}
+	.right {
+		padding-right: 50px;
+	}
+	.left {
+		padding-right: 50px;
 	}
 }
 
@@ -662,4 +657,23 @@ Main Components
 	.project-is-open .cd-scroll {
 		margin-top: 20px;
 	}
+	.right {
+		padding-right: 50px;
+	}
+	.left {
+		padding-right: 50px;
+	}
+}
+
+#challenge-img {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.right img {
+	/*-webkit-box-shadow: 0 11px 12px -3px rgba(168, 171, 173, 0.53);
+	box-shadow: 0 11px 12px -3px rgba(168, 171, 173, 0.53);*/
+
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
