@@ -39,8 +39,6 @@ Main Components
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 999;
-
 	overflow: hidden;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -49,16 +47,22 @@ Main Components
 	transition: all 0.2s ease-in-out;
 	background: rgba(255, 255, 255, 0.90);
 	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+	z-index: 99;
 }
 
 .cd-header {
 	height: 80px;
 	width: 90%;
 	margin: 0 auto;
+	z-index: 999;
+	position: relative;
 	-webkit-transition: -webkit-transform 0.5s;
 	-moz-transition: -moz-transform 0.5s;
+	-ms-transition: -ms-transform 0.5s;
+	-o-transition: -o-transform 0.5s;
 	transition: transform 0.5s;
 	/* Force Hardware Acceleration in WebKit */
+
 	z-index: 999;
 	-webkit-transform: translateZ(0);
 	-moz-transform: translateZ(0);
@@ -73,6 +77,14 @@ Main Components
 	content: "";
 	display: table;
 	clear: both;
+}
+
+.cd-header #contact-me {
+	display: block;
+	position: relative;
+	float: right;
+	margin-top: 28px;
+	margin-right: 10px;
 }
 
 .cd-header.nav-is-visible {
@@ -123,10 +135,15 @@ Main Components
 	text-indent: 100%;
 	white-space: nowrap;
 	color: transparent;
+	z-index: 999;
 }
 
 .nav-is-visible .cd-3d-nav-trigger {
 	margin-top: -158px;
+}
+
+.cd-header.nav-is-visible #contact-me {
+	display: none;
 }
 
 .cd-3d-nav-trigger span,
